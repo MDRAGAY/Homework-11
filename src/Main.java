@@ -4,9 +4,9 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
-
-
+        task3();
     }
+
 
     public static void displayYearsStatus(int year) {
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
@@ -53,5 +53,15 @@ public class Main {
             deliveryDay++;
         }
         return deliveryDay;
+    }
+    public static void task3() {
+        System.out.println("Задача 3");
+        int deliveryDistance = 21;
+        int deliveryDay = printDistanceInDay(deliveryDistance);
+        if (deliveryDay > 3) {
+            System.out.println("Доставка свыше 100 км не действует");
+        } else {
+            System.out.println("Потребуется для доставки дней: " + deliveryDay);
+        }
     }
 }
