@@ -3,6 +3,8 @@ import java.time.LocalDate;
 public class Main {
     public static void main(String[] args) {
         task1();
+        task2();
+
 
     }
 
@@ -31,5 +33,25 @@ public class Main {
         } else {
             System.out.println("Установите приложение для Android");
         }
+    }
+    public static void task2() {
+        System.out.println("задача 2");
+        int currentYear = LocalDate.now().getYear();
+        String osDevice = "android";
+        printDeviceVersion(osDevice, currentYear);
+    }
+
+    public static int printDistanceInDay(int deliveryDistance) {
+        int deliveryDay = 1;
+        if (deliveryDistance > 20) {
+            deliveryDay++;
+        }
+        if (deliveryDistance > 60) {
+            deliveryDay++;
+        }
+        if (deliveryDistance > 100) {
+            deliveryDay++;
+        }
+        return deliveryDay;
     }
 }
